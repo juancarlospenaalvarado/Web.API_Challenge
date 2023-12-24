@@ -10,6 +10,7 @@ public static class DependencyInjection
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
         services.AddTransient<GloblalExceptionHandlingMiddleware>();
+
         return services;
     }
 }

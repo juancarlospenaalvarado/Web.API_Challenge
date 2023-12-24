@@ -1,4 +1,4 @@
-﻿using Domain.Permisos;
+﻿using Domain.Entities.Permisos;
 using Domain.Primitives;
 using System;
 using System.Collections.Generic;
@@ -14,9 +14,9 @@ namespace Application.Permisos.Update
         private readonly IPermisoRepository _permisoRepository;
         private readonly IUnitOfWork _unitOfWork;
   
-        public UpdatePermisoCommandHandler(IPermisoRepository customerRepository, IUnitOfWork unitOfWork)
+        public UpdatePermisoCommandHandler(IPermisoRepository permisoRepository, IUnitOfWork unitOfWork)
         {
-            _permisoRepository = customerRepository ?? throw new ArgumentNullException(nameof(customerRepository));
+            _permisoRepository = permisoRepository ?? throw new ArgumentNullException(nameof(permisoRepository));
             _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
         }
         public async Task<ErrorOr<Unit>> Handle(UpdatePermisoCommand command, CancellationToken cancellationToken)
@@ -26,14 +26,14 @@ namespace Application.Permisos.Update
                 return Error.NotFound("Customer.NotFound", "The customer with the provide Id was not found.");
             }
 
-            Permiso customer = Permiso.UpdatPermiso(
+            Permiso permiso = Permiso.UpdatPermiso(
                 command.Id, 
                 command.NombreEmpleado,
                 command.ApellidoEmpleado,
                 command.TipoPermiso,
                 command.FechaPermiso);
 
-            _permisoRepository.Update(customer);
+            _permisoRepository.Update(permiso);
 
             await _unitOfWork.SaveChangesAsync(cancellationToken);
 

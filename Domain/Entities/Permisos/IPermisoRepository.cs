@@ -1,4 +1,4 @@
-﻿namespace Domain.Permisos;
+﻿namespace Domain.Entities.Permisos;
 
 public interface IPermisoRepository
 {

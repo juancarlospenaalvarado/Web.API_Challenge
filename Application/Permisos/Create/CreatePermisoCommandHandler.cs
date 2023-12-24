@@ -1,4 +1,4 @@
-﻿using Domain.Permisos;
+﻿using Domain.Entities.Permisos;
 using Domain.Primitives;
 
 namespace Application.Permisos.Create;

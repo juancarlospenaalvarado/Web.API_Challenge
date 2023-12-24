@@ -1,5 +1,5 @@
 ﻿using Application.Permisos.Common;
-using Domain.Permisos;
+using Domain.Entities.Permisos;
 
 namespace Application.Permisos.GetById;
 
@@ -18,14 +18,14 @@ internal sealed class GetPermisoByIdQueryHandler : IRequestHandler<GetPermisoByI
     {
         if (await _permisoRepository.GetByIdAsync((query.Id)) is not Permiso permiso)
         {
-            return Error.NotFound("Customer.NotFound", "The customer with the provide Id was not found.");
+            return Error.NotFound("Permiso.NotFound", "The customer with the provide Id was not found.");
         }
 
         return new PermisoResponse(
             permiso.Id,
             permiso.NombreEmpleado,
             permiso.ApellidoEmpleado,
-            permiso.TipoPermiso,
+            permiso.TipoPermisos,
             permiso.FechaPermiso);
     }
 }

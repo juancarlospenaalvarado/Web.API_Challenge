@@ -1,4 +1,4 @@
-﻿using Domain.Permisos;
+﻿using Domain.Entities.Permisos;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Persistence.Configuration;
@@ -14,8 +14,6 @@ internal class PermisoConfiguration : IEntityTypeConfiguration<Permiso>
         builder.Property(c => c.NombreEmpleado).HasMaxLength(50);
 
         builder.Property(c => c.ApellidoEmpleado).HasMaxLength(50);
-
-        builder.Property(c => c.TipoPermiso).HasMaxLength(50);
 
         builder.Property(c => c.FechaPermiso).HasMaxLength(9);
     }

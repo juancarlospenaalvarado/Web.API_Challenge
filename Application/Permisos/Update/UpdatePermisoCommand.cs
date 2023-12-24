@@ -4,5 +4,5 @@ public record UpdatePermisoCommand(
     int Id,
     string NombreEmpleado,
     string ApellidoEmpleado,
-    string TipoPermiso,
+    int TipoPermiso,
     DateTime FechaPermiso) : IRequest<ErrorOr<Unit>>;

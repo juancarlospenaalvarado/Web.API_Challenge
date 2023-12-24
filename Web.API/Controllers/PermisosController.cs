@@ -58,7 +58,7 @@ public class Permisos: ApiController
         {
             List<Error> errors = new()
             {
-                Error.Validation("Customer.UpdateInvalid", "The request Id does not match with the url Id.")
+                Error.Validation("Permiso.UpdateInvalid", "El ID de la solicitud no coincide con el ID de la URL.")
             };
             return Problem(errors);
         }

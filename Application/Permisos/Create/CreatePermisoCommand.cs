@@ -1,7 +1,9 @@
-﻿namespace Application.Permisos.Create;
+﻿using Domain.Entities.Permisos;
+
+namespace Application.Permisos.Create;
 
 public record CreatePermisoCommand(
     string NombreEmpleado,
     string ApellidoEmpleado,
-    string TipoPermiso,
+    int TipoPermiso,
     DateTime FechaPermiso) : IRequest<ErrorOr<int>>;

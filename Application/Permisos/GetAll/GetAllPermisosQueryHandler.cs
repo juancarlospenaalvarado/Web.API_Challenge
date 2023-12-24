@@ -1,5 +1,5 @@
 ﻿using Application.Permisos.Common;
-using Domain.Permisos;
+using Domain.Entities.Permisos;
 
 namespace Application.Permisos.GetAll;
 
@@ -20,7 +20,7 @@ internal sealed class GetAllPermisosQueryHandler : IRequestHandler<GetAllPermiso
                 permiso.Id,
                 permiso.NombreEmpleado,
                 permiso.ApellidoEmpleado,
-                permiso.TipoPermiso,
+                permiso.TipoPermisos,
                 permiso.FechaPermiso
             )).ToList();
     }

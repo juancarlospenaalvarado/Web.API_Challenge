@@ -1,5 +1,6 @@
 ﻿using Application.Data;
-using Domain.Permisos;
+using Domain.Entities.Permisos;
+
 
 //using Domain.Customers;
 using Domain.Primitives;
@@ -17,6 +18,7 @@ namespace Infrastructure.Persistence
         }
        
         public DbSet<Permiso> Permisos { get; set; }
+        public DbSet<TipoPermisos> TipoPermisos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

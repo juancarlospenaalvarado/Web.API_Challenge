@@ -1,5 +1,5 @@
 ﻿using Application.Data;
-using Domain.Permisos;
+using Domain.Entities.Permisos;
 using Domain.Primitives;
 using Infrastructure.Persistence;
 using Infrastructure.Persistence.Repositories;

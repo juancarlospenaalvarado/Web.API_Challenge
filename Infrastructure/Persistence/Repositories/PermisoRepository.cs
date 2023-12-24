@@ -1,4 +1,4 @@
-﻿using Domain.Permisos;
+﻿using Domain.Entities.Permisos;
 
 namespace Infrastructure.Persistence.Repositories;
 

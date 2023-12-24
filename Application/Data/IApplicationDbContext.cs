@@ -1,4 +1,4 @@
-﻿using Domain.Permisos;
+﻿using Domain.Entities.Permisos;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.Data;
